@@ -25,6 +25,10 @@ backend/*.jar
 .env.local
 .env.*.local
 
+# Environment examples (DO commit these)
+# .env.example
+# .env.local.example
+
 # OS files
 Thumbs.db
 .DS_Store

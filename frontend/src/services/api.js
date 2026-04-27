@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:8080/api' });
+// Use environment variable for API base URL, default to localhost for development
+const baseURL = process.env.REACT_APP_API_URL || 'http://localhost:8080/api';
+
+const API = axios.create({ baseURL });
 
 API.interceptors.request.use(config => {
   const token = localStorage.getItem('token');

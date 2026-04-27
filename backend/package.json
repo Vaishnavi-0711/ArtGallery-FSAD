@@ -1,0 +1,7 @@
+{
+  "name": "art-gallery-backend-runner",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "mvnw spring-boot:run"
+  }
+}

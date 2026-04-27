@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap');
+
+:root {
+  --primary: #000000;
+  --accent: #E31C5F; /* Premium Gallery Pink/Red */
+  --accent-hover: #C11850;
+  --bg-light: #ffffff;
+  --bg-gray: #f9f9f9;
+  --text-main: #1a1a1a;
+  --text-muted: #666666;
+  --border: #f0f0f0;
+  --white: #ffffff;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+/* Enhanced Navbar */
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  transition: var(--transition);
+}
+
+.nav-link {
+  color: var(--text-main) !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Premium Buttons */
+.btn-premium {
+  border-radius: 50px;
+  padding: 12px 32px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-premium-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-premium-primary:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(227, 28, 95, 0.2);
+}
+
+.btn-premium-accent {
+  background: var(--accent);
+  color: white;
+}
+
+/* Enhanced Cards */
+.card-premium {
+  background: var(--white) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 20px !important;
+  transition: var(--transition) !important;
+  overflow: hidden;
+}
+
+.card-premium:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md) !important;
+  border-color: transparent !important;
+}
+
+/* Section Spacing */
+section {
+  padding: 60px 0;
+}
+
+.hero-section {
+  padding: 80px 0 100px !important;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--accent);
+  margin-top: 15px;
+  border-radius: 2px;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 12px;
+  padding: 12px 18px;
+  border: 1px solid var(--border);
+  background: var(--bg-gray);
+}
+
+.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(227, 28, 95, 0.1);
+  background: white;
+}
+
+/* Animations */
+.fade-in { animation: fadeIn 0.8s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }

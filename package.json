@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "start": "concurrently \"npm start --prefix backend\" \"npm start --prefix frontend\"",
-    "install-all": "npm install --prefix frontend && npm install --prefix backend"
+    "install-all": "npm install --prefix frontend && npm install --prefix backend",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "push": "git add . && git commit -m \"Auto: Update changes\" && git push origin main",
+    "push-with-message": "git add . && git commit -m",
+    "status": "git status"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
